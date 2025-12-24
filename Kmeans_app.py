@@ -70,3 +70,7 @@ if st.button("Predict Segment"):
     cluster=kmeans.predict(input_scaled)[0]
 
     st.success(f"Predict Segment: Cluster {cluster}")
+    st.subheader("Cluster Profile")
+    st.dataframe(cluster_profile.loc[[cluster]])
+
+
