@@ -66,7 +66,7 @@ input_data.loc[0] = [
 input_scaled = scaler.transform(input_data)
 
 # --- Predict ---
-input_scaled=scaler.transform(input_data)
 if st.button("Predict Segment"):
     cluster=kmeans.predict(input_scaled)[0]
+
     st.success(f"Predict Segment: Cluster {cluster}")
